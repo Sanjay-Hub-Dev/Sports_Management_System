@@ -1,0 +1,36 @@
+# Uploaded files / user photos
+/uploads/
+/Dp/
+
+# Environment / credentials (you’ll keep real secrets here locally only)
+.env
+connection.php
+# If you have any other config with plain credentials, add it:
+# config.php
+# db_credentials.php
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# Logs and runtime
+*.log
+*.cache
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories (if you ever use composer/npm)
+vendor/
+node_modules/
+
+# Backup / temp
+*~
+*.swp
+*.tmp
+
+# PHPStorm / JetBrains
+*.iml
