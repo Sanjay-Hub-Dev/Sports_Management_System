@@ -47,7 +47,6 @@ $stmt = $conn->query($query);
     <h2>Participation Records</h2>
     <table>
         <tr>
-            <th>Participation ID</th>
             <th>Student</th>
             <th>Event</th>
             <th>Type</th>
@@ -59,7 +58,6 @@ $stmt = $conn->query($query);
         </tr>
         <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
         <tr>
-            <td><?= $row['participation_id'] ?></td>
             <td><?= $row['student_name'] ?> (<?= $row['student_id'] ?>)</td>
             <td><?= $row['event_name'] ?></td>
             <td><?= $row['event_type'] ?></td>
