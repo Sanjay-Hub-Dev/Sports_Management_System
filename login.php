@@ -21,42 +21,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>User Login</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <div class="topnav">
-      <div class="brand">JBIET Sports Event</div>
-      <div>
-        <a href="index.php">Home</a>
-        <a href="sign-up.php">SignUp</a>
-      </div>
-    </div>
-    <div class="card" style="max-width:500px;margin:auto;">
-      <h2>Student Login</h2>
-      <?php if ($error): ?><div class="alert error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
-      <form method="post">
-        <div class="field-grid">
-          <div>
-            <label for="id">Student ID</label>
-            <input type="text" name="id" id="id" required>
-          </div>
-          <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-          </div>
+    <div class="container">
+        <div class="topnav">
+            <div class="brand">JBIET Sports Event</div>
+            <div>
+                <a href="index.php">Home</a>
+                <a href="sign-up.php">SignUp</a>
+            </div>
         </div>
-        <div style="margin-top:16px;">
-          <button type="submit" class="button">Login</button>
+        <div class="card" style="max-width:500px;margin:auto;">
+            <h2>Student Login</h2>
+            <?php if ($error): ?>
+                <div class="alert error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
+            <form method="post">
+                <div class="field-grid">
+                    <div>
+                        <label for="id">Student ID</label>
+                        <input type="text" name="id" id="id" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                </div>
+                <div style="margin-top:16px;">
+                    <button type="submit" class="button">Login</button>
+                </div>
+            </form>
+            <p class="small">New? <a href="sign-up.php">Sign up</a></p>
+            <p class="small"><a href="index.php">Back to selector</a></p>
         </div>
-      </form>
-      <p class="small">New? <a href="sign-up.php">Sign up</a></p>
-      <p class="small"><a href="index.php">Back to selector</a></p>
     </div>
-  </div>
 </body>
+
 </html>
